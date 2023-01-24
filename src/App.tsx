@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
-import { User } from "./context/interfaces";
-import { InputValueContext } from "./context/InputValueContext";
+import { User } from "./context-example/interfaces";
+import { InputValueContext } from "./context-example/InputValueContext";
 export interface AppProps {
   heading: string;
   subHeading?: string;
