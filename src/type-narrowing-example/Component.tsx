@@ -1,13 +1,13 @@
 // Do
 interface ImageItem {
-  id: number;
+  id: string;
   title: string;
   imageUrl: string;
   // For equality check type narrowing:
   type: "ImageItem";
 }
 interface QuoteItem {
-  id: number;
+  id: string;
   quote: string;
   // For equality check type narrowing:
   type: "QuoteItem";
