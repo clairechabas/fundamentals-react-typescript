@@ -1,11 +1,6 @@
 import { useState } from "react";
 
-// type CheckoutStep = "Details" | "Shipping" | "Payment";
-enum CheckoutStep {
-  Details = "Details",
-  Shipping = "Shipping",
-  Payment = "Payment",
-}
+type CheckoutStep = "Details" | "Shipping" | "Payment";
 
 function Checkout() {
   const [checkoutStep, setCheckoutStep] = useState<CheckoutStep>("Details");
