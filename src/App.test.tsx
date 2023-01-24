@@ -1,9 +1,21 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render, screen } from "@testing-library/react";
+import App from "./App";
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+const setup = ({ heading = "Coucou" } = {}) => {
+  const props = {
+    heading,
+  };
+
+  const view = render(<App {...props} />);
+
+  return {
+    ...view,
+    props,
+  };
+};
+
+test("renders a heading", () => {
+  const { props } = setup();
+
+  expect(screen.getByText(props.heading)).toBeInTheDocument();
 });
